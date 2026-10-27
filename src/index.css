@@ -1,0 +1,88 @@
+@import './styles/tokens.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: light dark;
+  }
+
+  body {
+    min-height: 100vh;
+    background-color: var(--color-bg-page);
+    color: var(--color-text-main);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    color: var(--color-text-main);
+    letter-spacing: -0.025em;
+    font-weight: 700;
+  }
+
+  /* Accessible focus rings */
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+}
+
+/* Accessibility: Skip to Content Link */
+.skip-to-content {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  z-index: 9999;
+  transition: top 0.2s ease-in-out;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.skip-to-content:focus {
+  top: 1rem;
+  outline: 3px solid #ffffff;
+}
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom scrollbar for gallery and code blocks */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-page);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-strong);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}

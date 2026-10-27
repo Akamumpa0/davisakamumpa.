@@ -1,0 +1,69 @@
+:root {
+  /* Cardinal Color Palette (Light Mode) */
+  --color-primary: #1D4ED8;          /* Royal Blue */
+  --color-primary-hover: #1E40AF;    /* Darker Royal Blue */
+  --color-primary-deep: #0B2A8A;     /* Deep Blue for hero and footer */
+  --color-primary-tint: #E8EFFF;     /* Light blue tint for surfaces and tags */
+  --color-primary-sky: #60A5FA;      /* Sky blue for subtle highlights */
+
+  /* Neutrals & Surfaces */
+  --color-bg-page: #F7F9FF;          /* Off-white background */
+  --color-bg-surface: #FFFFFF;       /* Crisp white surface */
+  --color-bg-elevated: #F0F4FF;      /* Elevated soft card tint */
+
+  /* Typography / Ink */
+  --color-text-main: #0F172A;        /* Ink heading/body */
+  --color-text-muted: #475569;       /* Muted body */
+  --color-text-subtle: #64748B;      /* Secondary subtle */
+  --color-text-inverse: #FFFFFF;     /* White text on deep blue */
+
+  /* Borders */
+  --color-border: #DCE5FA;           /* Light blue-tinted border */
+  --color-border-strong: #BFD1FA;
+
+  /* Status Colors */
+  --color-error: #DC2626;
+  --color-error-bg: #FEF2F2;
+  --color-success: #059669;
+  --color-success-bg: #ECFDF5;
+
+  /* Shadows (subtle, non-muddy) */
+  --shadow-card: 0 1px 3px rgba(11, 42, 138, 0.05), 0 4px 12px rgba(11, 42, 138, 0.03);
+  --shadow-card-hover: 0 8px 24px rgba(29, 78, 216, 0.12), 0 2px 6px rgba(11, 42, 138, 0.04);
+  --shadow-elevated: 0 12px 32px rgba(11, 42, 138, 0.08);
+}
+
+.dark {
+  /* Dark Mode Palette */
+  --color-primary: #3B82F6;          /* Brighter Blue for high contrast */
+  --color-primary-hover: #60A5FA;
+  --color-primary-deep: #071538;     /* Very deep navy */
+  --color-primary-tint: #142752;     /* Dark navy tint */
+  --color-primary-sky: #93C5FD;
+
+  /* Dark Surfaces */
+  --color-bg-page: #060D1E;          /* Deep navy page background */
+  --color-bg-surface: #0C1A38;       /* Navy surface card */
+  --color-bg-elevated: #12244C;      /* Slightly raised dark card */
+
+  /* Typography / Ink */
+  --color-text-main: #F8FAFC;        /* Crisp white/slate */
+  --color-text-muted: #94A3B8;       /* Readable light gray */
+  --color-text-subtle: #64748B;
+  --color-text-inverse: #FFFFFF;
+
+  /* Borders */
+  --color-border: #1E345D;
+  --color-border-strong: #2A487D;
+
+  /* Status Colors */
+  --color-error: #F87171;
+  --color-error-bg: #450A0A;
+  --color-success: #34D399;
+  --color-success-bg: #064E3B;
+
+  /* Dark Shadows */
+  --shadow-card: 0 2px 6px rgba(0, 0, 0, 0.4);
+  --shadow-card-hover: 0 8px 28px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(59, 130, 246, 0.25);
+  --shadow-elevated: 0 16px 40px rgba(0, 0, 0, 0.6);
+}
