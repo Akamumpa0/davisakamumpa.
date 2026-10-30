@@ -3,15 +3,16 @@ import { Helmet } from 'react-helmet-async';
 import { profileData } from '../../data/profile';
 
 export const StructuredData: React.FC = () => {
-  const siteUrl = import.meta.env.VITE_SITE_URL || 'https://myportfolio.dev';
+  const siteUrl = (import.meta.env.VITE_SITE_URL || 'https://akamumpadavis.tech').replace(/\/+$/, '');
 
   const personSchema = {
-    '@context': 'https://schema.org',
     '@type': 'Person',
+    '@id': `${siteUrl}/#person`,
     name: profileData.name,
     jobTitle: profileData.title,
-    url: siteUrl,
-    image: profileData.avatarUrl,
+    description: profileData.oneLinePitch,
+    url: `${siteUrl}/`,
+    image: new URL(profileData.avatarUrl, `${siteUrl}/`).toString(),
     sameAs: profileData.socialLinks.map(s => s.url),
     knowsAbout: [
       'Full-Stack Web Development',
@@ -25,33 +26,36 @@ export const StructuredData: React.FC = () => {
     ],
     address: {
       '@type': 'PostalAddress',
-      addressLocality: profileData.location
+      addressLocality: 'Mbarara',
+      addressCountry: 'Uganda'
     }
   };
 
-  const serviceSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'ProfessionalService',
-    name: `${profileData.name} - Freelance Development & Design`,
-    image: profileData.avatarUrl,
-    url: siteUrl,
-    priceRange: '$$$',
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: profileData.location
-    },
-    openingHoursSpecification: {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-      opens: '09:00',
-      closes: '18:00'
-    }
+  const websiteSchema = {
+    '@type': 'WebSite',
+    '@id': `${siteUrl}/#website`,
+    name: `${profileData.name} Portfolio`,
+    url: `${siteUrl}/`,
+    inLanguage: 'en',
+    publisher: { '@id': `${siteUrl}/#person` }
+  };
+
+  const profilePageSchema = {
+    '@type': 'ProfilePage',
+    '@id': `${siteUrl}/#profilepage`,
+    url: `${siteUrl}/`,
+    name: `${profileData.name} | ${profileData.title}`,
+    mainEntity: { '@id': `${siteUrl}/#person` }
   };
 
   return (
     <Helmet>
-      <script type="application/ld+json">{JSON.stringify(personSchema)}</script>
-      <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
+      <script type="application/ld+json">
+        {JSON.stringify({
+          '@context': 'https://schema.org',
+          '@graph': [personSchema, websiteSchema, profilePageSchema]
+        })}
+      </script>
     </Helmet>
   );
 };

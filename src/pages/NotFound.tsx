@@ -11,6 +11,7 @@ export const NotFound: React.FC = () => {
         title="404 Page Not Found"
         description="The requested page could not be located."
         canonicalPath="/404"
+        noindex
       />
 
       <PageContainer size="narrow" className="py-24 sm:py-32 text-center">

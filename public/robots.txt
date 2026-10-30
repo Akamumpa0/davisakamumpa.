@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://myportfolio.dev/sitemap.xml
+Sitemap: https://akamumpadavis.tech/sitemap.xml

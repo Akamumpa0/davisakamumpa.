@@ -81,7 +81,7 @@ export const Home: React.FC = () => {
   return (
     <>
       <SEOHead
-        title={profile.name}
+        title="Full-Stack Developer & UI Designer in Uganda"
         description={`${profile.title}. ${profile.oneLinePitch}`}
         canonicalPath="/"
       />
