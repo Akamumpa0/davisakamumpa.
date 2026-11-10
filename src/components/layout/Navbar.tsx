@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
-import { Menu, X, ArrowUpRight, Code2 } from 'lucide-react';
+import { Menu, X, ArrowUpRight } from 'lucide-react';
 import { ThemeToggle } from './ThemeToggle';
 import { Button } from '../common/Button';
 import { profileData } from '../../data/profile';
@@ -50,12 +50,17 @@ export const Navbar: React.FC = () => {
             to="/"
             className="flex items-center gap-2.5 font-display font-extrabold text-lg sm:text-xl text-ink tracking-tight hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-md p-1"
           >
-            <span className="w-8 h-8 rounded-lg bg-primary-deep text-white flex items-center justify-center shadow-sm border border-primary/20">
-              <Code2 size={16} />
+            {/* Davies Visual Media logo — appears in search results & brand recognition */}
+            <span className="w-9 h-9 rounded-lg bg-white border border-border shadow-sm flex items-center justify-center overflow-hidden shrink-0">
+              <img
+                src="/assets/logos/davies-visual-media-logo.png"
+                alt="Davies Visual Media"
+                className="w-full h-full object-contain p-0.5"
+                width={36}
+                height={36}
+              />
             </span>
-            <span>
-              {profileData.name}
-            </span>
+            <span>{profileData.name}</span>
           </Link>
 
           {/* Desktop Navigation Links */}

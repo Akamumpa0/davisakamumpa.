@@ -3,29 +3,26 @@ import { TestimonialItem } from '../types';
 export const testimonialsData: TestimonialItem[] = [
   {
     id: "test-1",
-    name: "Marcus Vance",
-    role: "Chief Technology Officer",
-    company: "Zenith Capital Markets",
-    quote: "Davis is that rare 1% hybrid talent who can design a stunning, institutional-grade product interface in Figma on Monday and ship rock-solid, production-ready TypeScript code on Thursday. The realtime dashboard transformed our trader workflow.",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80",
-    projectContext: "Web Development & High-Density Financial Dashboard"
+    name: "Kacooni William",
+    role: "Chief Executive Officer",
+    company: "Wilkac Energies",
+    quote: "Davis delivered a professional, polished web presence for Wilkac Energies that immediately elevated our brand credibility. He understood our vision quickly, worked efficiently, and produced results well beyond what we expected.",
+    projectContext: "Web Development & Brand Design"
   },
   {
     id: "test-2",
-    name: "Elena Rostova",
-    role: "VP of Product",
-    company: "Pulse BioTechnologies",
-    quote: "Our previous agency struggled for six months with native iOS/Android sync issues. Davis stepped in, unified our codebase under React Native in four weeks, and delivered a 60fps app that our users genuinely love.",
-    avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80",
-    projectContext: "Mobile App Development & HealthKit Integration"
+    name: "Muhwezi Emmanuel",
+    role: "President",
+    company: "SC Ensayi",
+    quote: "The sponsorship and promotional fliers Davis designed for SC Ensayi were outstanding — bold, eye-catching, and perfectly on-brand. Our social media engagement increased significantly after every release. Highly recommend his design work.",
+    projectContext: "Graphic Design & Media Visibility"
   },
   {
     id: "test-3",
-    name: "David Chen",
-    role: "Founder & CEO",
-    company: "Aurora Climate Tech",
-    quote: "From our brand identity and pitch deck assets to our core SaaS customer platform, Davis delivered beyond all expectations. His disciplined blue-and-white visual identity helped us close our $28M Series B round.",
-    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80",
-    projectContext: "Brand Identity, Design System & Web App"
+    name: "Muhumuza Bright",
+    role: "Chief Executive Officer",
+    company: "Bryt Ma Tech",
+    quote: "Davis co-founded Craftalo Technologies with a rare combination of technical depth and design sensibility. He ships clean, production-grade code and always keeps the client's commercial goals at the center of every decision.",
+    projectContext: "Full-Stack Development & Tech Startup Collaboration"
   }
 ];

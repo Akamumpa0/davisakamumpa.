@@ -12,8 +12,23 @@ export const StructuredData: React.FC = () => {
     jobTitle: profileData.title,
     description: profileData.oneLinePitch,
     url: `${siteUrl}/`,
-    image: new URL(profileData.avatarUrl, `${siteUrl}/`).toString(),
-    sameAs: profileData.socialLinks.map(s => s.url),
+    image: {
+      '@type': 'ImageObject',
+      url: `${siteUrl}/assets/profile.jpg`,
+      contentUrl: `${siteUrl}/assets/profile.jpg`,
+      width: 800,
+      height: 800,
+    },
+    // Logo used for Google Knowledge Panel & brand recognition
+    logo: {
+      '@type': 'ImageObject',
+      url: `${siteUrl}/assets/logos/davies-visual-media-logo.png`,
+      contentUrl: `${siteUrl}/assets/logos/davies-visual-media-logo.png`,
+    },
+    sameAs: [
+      ...profileData.socialLinks.map(s => s.url),
+      `${siteUrl}/`
+    ],
     knowsAbout: [
       'Full-Stack Web Development',
       'React',
@@ -22,13 +37,29 @@ export const StructuredData: React.FC = () => {
       'Mobile Application Development',
       'UI/UX Design',
       'Brand Identity',
-      'Design Systems'
+      'Design Systems',
+      'Adobe Photoshop',
+      'Adobe Illustrator',
+      'Figma'
     ],
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Mbarara',
       addressCountry: 'Uganda'
-    }
+    },
+    worksFor: [
+      {
+        '@type': 'Organization',
+        name: 'Davies Visual Media',
+        url: `${siteUrl}/`,
+        logo: `${siteUrl}/assets/logos/davies-visual-media-logo.png`,
+      },
+      {
+        '@type': 'Organization',
+        name: 'Craftalo Technologies',
+        logo: `${siteUrl}/assets/logos/craftalo-logo.png`,
+      }
+    ]
   };
 
   const websiteSchema = {
@@ -48,12 +79,30 @@ export const StructuredData: React.FC = () => {
     mainEntity: { '@id': `${siteUrl}/#person` }
   };
 
+  const organizationSchema = {
+    '@type': 'Organization',
+    '@id': `${siteUrl}/#organization`,
+    name: 'Davies Visual Media',
+    url: `${siteUrl}/`,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${siteUrl}/assets/logos/davies-visual-media-logo.png`,
+      contentUrl: `${siteUrl}/assets/logos/davies-visual-media-logo.png`,
+    },
+    founder: { '@id': `${siteUrl}/#person` },
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Mbarara',
+      addressCountry: 'Uganda'
+    }
+  };
+
   return (
     <Helmet>
       <script type="application/ld+json">
         {JSON.stringify({
           '@context': 'https://schema.org',
-          '@graph': [personSchema, websiteSchema, profilePageSchema]
+          '@graph': [personSchema, websiteSchema, profilePageSchema, organizationSchema]
         })}
       </script>
     </Helmet>

@@ -179,14 +179,30 @@ export const Services: React.FC = () => {
             {testimonials.map(item => (
               <Card key={item.id} className="flex flex-col justify-between">
                 <blockquote className="text-sm text-ink-muted italic leading-relaxed mb-6">
-                  "{item.quote}"
+                  &ldquo;{item.quote}&rdquo;
                 </blockquote>
-                <div className="pt-4 border-t border-border">
-                  <div className="font-bold text-sm text-ink">{item.name}</div>
-                  <div className="text-xs text-ink-muted">{item.role}, {item.company}</div>
-                  {item.projectContext && (
-                    <div className="text-[11px] text-primary mt-1 font-medium">{item.projectContext}</div>
+                <div className="pt-4 border-t border-border flex items-center gap-3">
+                  {item.avatar ? (
+                    <img
+                      src={item.avatar}
+                      alt={item.name}
+                      className="w-9 h-9 rounded-full object-cover border border-border shrink-0"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="w-9 h-9 rounded-full bg-primary-tint border border-primary/20 flex items-center justify-center shrink-0">
+                      <span className="text-primary font-bold text-xs font-display">
+                        {item.name.split(' ').map(n => n[0]).slice(0, 2).join('')}
+                      </span>
+                    </div>
                   )}
+                  <div>
+                    <div className="font-bold text-sm text-ink">{item.name}</div>
+                    <div className="text-xs text-ink-muted">{item.role}, {item.company}</div>
+                    {item.projectContext && (
+                      <div className="text-[11px] text-primary mt-1 font-medium">{item.projectContext}</div>
+                    )}
+                  </div>
                 </div>
               </Card>
             ))}

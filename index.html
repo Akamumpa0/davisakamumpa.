@@ -4,14 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    
+
+    <!-- Preload hero portrait for fast LCP on mobile -->
+    <link rel="preload" as="image" href="/assets/profile.jpg" fetchpriority="high" />
+
     <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap&font-display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
 
     <title>Full-Stack Developer &amp; UI Designer in Uganda | Akamumpa Davis</title>
     <meta name="description" content="Akamumpa Davis is a full-stack developer, mobile app specialist, and UI designer in Mbarara, Uganda. Explore his web, mobile, and design projects." />
@@ -23,11 +34,11 @@
     <meta property="og:description" content="Akamumpa Davis is a full-stack developer, mobile app specialist, and UI designer in Mbarara, Uganda. Explore his web, mobile, and design projects." />
     <meta property="og:url" content="https://akamumpadavis.tech/" />
     <meta property="og:site_name" content="Akamumpa Davis Portfolio" />
-    <meta property="og:image" content="https://akamumpadavis.tech/assets/profile.jpg" />
+    <meta property="og:image" content="https://akamumpadavis.tech/assets/logos/davies-visual-media-logo.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Full-Stack Developer &amp; UI Designer in Uganda | Akamumpa Davis" />
     <meta name="twitter:description" content="Akamumpa Davis is a full-stack developer, mobile app specialist, and UI designer in Mbarara, Uganda. Explore his web, mobile, and design projects." />
-    <meta name="twitter:image" content="https://akamumpadavis.tech/assets/profile.jpg" />
+    <meta name="twitter:image" content="https://akamumpadavis.tech/assets/logos/davies-visual-media-logo.png" />
     <meta name="theme-color" content="#0B2A8A" />
   </head>
   <body class="bg-bg-page text-ink font-sans antialiased selection:bg-primary selection:text-white transition-colors duration-200">

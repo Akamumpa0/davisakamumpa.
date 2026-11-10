@@ -178,8 +178,9 @@ export const Home: React.FC = () => {
                   <img
                     src={profile.avatarUrl}
                     alt={profile.name}
-                    className="w-full h-[420px] object-cover object-center"
+                    className="w-full h-[280px] sm:h-[380px] lg:h-[420px] object-cover object-center"
                     loading="eager"
+                    fetchPriority="high"
                   />
                   {/* Name Plate Card */}
                   <div className="absolute bottom-4 left-4 right-4 bg-blue-950/80 backdrop-blur-md px-4 py-3 rounded-xl border border-white/15 shadow-lg">
@@ -382,8 +383,8 @@ export const Home: React.FC = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="Client Endorsements"
-            title="What founders and engineering leaders say"
-            subtitle="Honest feedback from long-term clients and commercial partners."
+            title="What clients say about working with me"
+            subtitle="Honest feedback from business owners, founders, and partners across Uganda."
             align="center"
           />
 
@@ -397,17 +398,24 @@ export const Home: React.FC = () => {
                     ))}
                   </div>
                   <blockquote className="text-sm sm:text-base text-ink-muted leading-relaxed italic mb-6">
-                    "{item.quote}"
+                    &ldquo;{item.quote}&rdquo;
                   </blockquote>
                 </div>
                 <div className="flex items-center gap-3 pt-4 border-t border-border">
-                  {item.avatar && (
+                  {item.avatar ? (
                     <img
                       src={item.avatar}
                       alt={item.name}
-                      className="w-10 h-10 rounded-full object-cover border border-border"
+                      className="w-10 h-10 rounded-full object-cover border border-border shrink-0"
                       loading="lazy"
                     />
+                  ) : (
+                    /* Initials avatar fallback for clients without photos */
+                    <div className="w-10 h-10 rounded-full bg-primary-tint border border-primary/20 flex items-center justify-center shrink-0">
+                      <span className="text-primary font-bold text-sm font-display">
+                        {item.name.split(' ').map(n => n[0]).slice(0, 2).join('')}
+                      </span>
+                    </div>
                   )}
                   <div>
                     <div className="text-sm font-bold text-ink">{item.name}</div>
