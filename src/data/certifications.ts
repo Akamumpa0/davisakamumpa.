@@ -3,34 +3,29 @@ import { CertificationItem } from '../types';
 export const certificationsData: CertificationItem[] = [
   {
     id: "cert-1",
-    title: "AWS Certified Solutions Architect – Associate",
-    issuer: "Amazon Web Services (AWS)",
+    title: "GitHub Student Developer Pack",
+    issuer: "GitHub Education",
     year: "2024",
-    credentialId: "AWS-SAA-8392018",
-    credentialUrl: "https://aws.amazon.com/verification"
+    credentialUrl: "https://education.github.com/pack"
   },
   {
     id: "cert-2",
-    title: "Meta Certified React Native Specialist",
-    issuer: "Meta / Coursera",
-    year: "2023",
-    credentialId: "META-RN-49102",
-    credentialUrl: "https://coursera.org/verify/professional-cert"
+    title: "Bachelor of Science in Computer Science (In Progress)",
+    issuer: "Mbarara University of Science and Technology (MUST)",
+    year: "2023 – 2027",
   },
   {
     id: "cert-3",
-    title: "Figma Certified Design Systems Professional",
-    issuer: "Figma Academy",
+    title: "Responsive Web Design",
+    issuer: "freeCodeCamp",
     year: "2023",
-    credentialId: "FIGMA-DS-7721",
-    credentialUrl: "https://figma.com/education"
+    credentialUrl: "https://www.freecodecamp.org/certification"
   },
   {
     id: "cert-4",
-    title: "Google Professional Web Performance & Accessibility Specialist",
-    issuer: "Google Developers",
-    year: "2022",
-    credentialId: "GOOG-DEV-3019",
-    credentialUrl: "https://developers.google.com"
+    title: "JavaScript Algorithms and Data Structures",
+    issuer: "freeCodeCamp",
+    year: "2023",
+    credentialUrl: "https://www.freecodecamp.org/certification"
   }
 ];

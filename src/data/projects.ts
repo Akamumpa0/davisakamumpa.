@@ -2,6 +2,26 @@ import { ProjectItem } from '../types';
 
 export const projectsData: ProjectItem[] = [
   {
+    id: "davies-visual-media-website",
+    slug: "davies-visual-media-website",
+    title: "Davies Visual Media - Agency Website",
+    category: "Web",
+    client: "Davies Visual Media",
+    shortDescription: "A premium agency website for Davies Visual Media — featuring a bold hero section, service breakdown cards, portfolio showcase, and clear client conversion pathways, built with React and Tailwind CSS.",
+    featured: true,
+    coverImage: "/assets/ui-davies-visual-media.png",
+    tags: ["React", "TypeScript", "Tailwind CSS", "Vite", "Framer Motion"],
+    year: "2026",
+    metrics: "Full agency digital presence live",
+    problem: "Davies Visual Media needed a professional online presence that matched the quality of its design output — something that could immediately signal credibility to potential clients and showcase the agency's brand and service range.",
+    approach: "Designed and built a clean, conversion-focused agency website using React, TypeScript, and Tailwind CSS. The design uses a bold hero section with animated entrance, clearly structured service cards, a portfolio section, and direct contact pathways optimized for client acquisition.",
+    result: "A fully live, mobile-responsive agency website that accurately represents the Davies Visual Media brand and serves as the primary business card for all client engagements.",
+    techStack: ["React", "TypeScript", "Tailwind CSS", "Vite", "Framer Motion"],
+    screenshots: [
+      "/assets/ui-davies-visual-media.png"
+    ]
+  },
+  {
     id: "easypay-api",
     slug: "easypay-api",
     title: "EasyPay - Unified Payment Orchestration API",
@@ -27,6 +47,7 @@ export const projectsData: ProjectItem[] = [
     slug: "easypharma-pos",
     title: "EasyPharma - Open-Source Pharmacy POS System",
     category: "Web",
+    client: "Open Source / Community",
     shortDescription: "A free, open-source web-based point-of-sale and inventory management system built for pharmacies - customizable, community-driven, and designed to raise the standard of pharmacy operations globally.",
     featured: true,
     coverImage: "https://images.unsplash.com/photo-1576602976047-174e57a47881?auto=format&fit=crop&w=1200&q=80",

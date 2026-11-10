@@ -53,7 +53,7 @@ export const allFaqData: FAQItem[] = [
     id: "faq-remote",
     category: "Collaboration",
     question: "How do you handle remote collaboration across different time zones?",
-    answer: "I have worked remotely with clients across North America, Europe, Asia, and Australia for 5+ years. I provide daily asynchronous updates via Slack/Loom, maintain transparent GitHub and Figma boards, and schedule weekly sync calls during overlapping business hours."
+    answer: "I have worked remotely with clients across Uganda and internationally. I provide daily asynchronous updates via WhatsApp and email, maintain transparent GitHub boards, and schedule calls during overlapping hours. Clear communication is a core part of my delivery process."
   },
   {
     id: "faq-handover",
