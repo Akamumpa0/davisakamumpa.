@@ -20,7 +20,7 @@ export const Certifications: React.FC = () => {
     <>
       <SEOHead
         title="Professional Certifications"
-        description="Verified industry credentials across cloud architecture, modern mobile engineering, and design systems."
+        description="Certifications, learning milestones, and community credentials earned by Akamumpa Davis — including freeCodeCamp and GitHub Student Developer Pack."
         canonicalPath="/certifications"
       />
 
@@ -28,7 +28,7 @@ export const Certifications: React.FC = () => {
         <SectionHeading
           eyebrow="Verified Credentials"
           title="Industry certifications & technical licenses"
-          subtitle="Continuous learning, rigorous examination, and professional accreditations from industry leaders."
+          subtitle="Ongoing education, community certifications, and developer program memberships — building real skills through real projects."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
