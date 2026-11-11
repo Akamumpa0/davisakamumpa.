@@ -2,9 +2,29 @@ import { ProjectItem } from '../types';
 
 export const projectsData: ProjectItem[] = [
   {
+    id: "craftalo-pos",
+    slug: "craftalo-pos",
+    title: "Craftalo POS – Mobile-First Point of Sale System",
+    category: "Web",
+    client: "Craftalo Technologies",
+    shortDescription: "A modern, mobile-first Point of Sale and inventory management system with barcode scanning, offline support, and real-time sync — built with TypeScript, Supabase, and Redis caching.",
+    featured: true,
+    coverImage: "/assets/ui-easypharma-admin.png",
+    tags: ["TypeScript", "Supabase", "Redis", "Barcode Scanning", "PWA", "Offline-First"],
+    year: "2026",
+    metrics: "Works fully offline · Redis-cached queries · Real-time inventory sync",
+    problem: "Small and medium businesses in Uganda needed a POS system that works reliably in areas with unstable internet, supports barcode scanning for fast checkout, and keeps inventory accurate across multiple devices in real time.",
+    approach: "Built a Progressive Web App (PWA) using TypeScript with a Supabase (PostgreSQL) backend for persistent storage and real-time subscriptions. Redis was integrated for caching hot product lookups, reducing DB round-trips on high-traffic checkout flows. IndexedDB was used for offline queue storage, syncing transactions to Supabase when connectivity is restored. Barcode scanning was implemented via the browser's MediaDevices API with a ZXing-based decoder. The UI was designed mobile-first to work on tablets and phones used at shop counters.",
+    result: "A fully functional POS that processes sales offline and syncs automatically on reconnect. Barcode scanning reduces checkout time significantly. Redis caching keeps product lookups near-instant even under load. The system is currently in use and actively maintained under Craftalo Technologies.",
+    techStack: ["TypeScript", "CSS", "HTML", "JavaScript", "Supabase", "PostgreSQL", "Redis", "IndexedDB", "ZXing Barcode", "PWA / Service Worker"],
+    screenshots: [
+      "/assets/ui-easypharma-admin.png"
+    ]
+  },
+  {
     id: "davies-visual-media-website",
     slug: "davies-visual-media-website",
-    title: "Davies Visual Media - Agency Website",
+    title: "Davies Visual Media – Agency Website",
     category: "Web",
     client: "Davies Visual Media",
     shortDescription: "A premium agency website for Davies Visual Media — featuring a bold hero section, service breakdown cards, portfolio showcase, and clear client conversion pathways, built with React and Tailwind CSS.",
@@ -24,8 +44,9 @@ export const projectsData: ProjectItem[] = [
   {
     id: "easypay-api",
     slug: "easypay-api",
-    title: "EasyPay - Unified Payment Orchestration API",
+    title: "EasyPay – Unified Payment Orchestration API",
     category: "Web",
+    client: "Craftalo Technologies",
     shortDescription: "A provider-agnostic payment API that unifies Paystack, Flutterwave, and more behind a single interface - with built-in failover, idempotency, and AES-256 credential encryption.",
     featured: true,
     coverImage: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=80",
@@ -45,7 +66,7 @@ export const projectsData: ProjectItem[] = [
   {
     id: "easypharma-pos",
     slug: "easypharma-pos",
-    title: "EasyPharma - Open-Source Pharmacy POS System",
+    title: "EasyPharma – Open-Source Pharmacy POS System",
     category: "Web",
     client: "Open Source / Community",
     shortDescription: "A free, open-source web-based point-of-sale and inventory management system built for pharmacies - customizable, community-driven, and designed to raise the standard of pharmacy operations globally.",
@@ -66,8 +87,9 @@ export const projectsData: ProjectItem[] = [
   {
     id: "flare-media-sponsor-flier",
     slug: "flare-media-sponsor-flier",
-    title: "Flare Media x SC Ensayi - Sponsorship Announcement Flier",
+    title: "Flare Media x SC Ensayi – Sponsorship Announcement Flier",
     category: "Design",
+    client: "Flare Media / SC Ensayi",
     shortDescription: "A bold sponsorship announcement flier designed for Flare Media, declaring their official partnership with SC Ensayi for the Termites League Season 6.",
     featured: true,
     coverImage: "/assets/flier-flare-media-sponsor.png",
@@ -84,8 +106,9 @@ export const projectsData: ProjectItem[] = [
   {
     id: "kizito-swearing-in-flier",
     slug: "kizito-swearing-in-flier",
-    title: "Hon. Kizito Abasi - Swearing-In Ceremony Flier",
+    title: "Hon. Kizito Abasi – Swearing-In Ceremony Flier",
     category: "Design",
+    client: "Lwengo District",
     shortDescription: "An official event flier designed for the swearing-in ceremony of Hon. Kizito Abasi as LC5 Chairman of Lwengo District, clearly communicating the date, venue, and significance of the occasion.",
     featured: true,
     coverImage: "/assets/flier-kizito-swearing-in.jpg",
@@ -102,8 +125,9 @@ export const projectsData: ProjectItem[] = [
   {
     id: "edgar-mp-campaign-flier",
     slug: "edgar-mp-campaign-flier",
-    title: "Muhanguzi Edgar - Member of Parliament Campaign Flier",
+    title: "Muhanguzi Edgar – Member of Parliament Campaign Flier",
     category: "Design",
+    client: "Muhanguzi Edgar (Clinton)",
     shortDescription: "A clean and impactful campaign flier for Muhanguzi Edgar (Clinton), candidate for Member of Parliament, Bushenyi Ishaka Municipality, for the 2031-2036 term.",
     featured: true,
     coverImage: "/assets/flier-edgar-mp.png",
